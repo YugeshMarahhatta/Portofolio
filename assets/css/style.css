@@ -27,6 +27,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+div {
+  border-radius: 16px;
+}
+form {
+    border-radius: 16px;
+}
+#name,#email,#subject,#message {
+  border-radius: 8px;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -268,12 +277,16 @@ section {
   padding-bottom: 30px;
 }
 .section-title h2 {
+  background: linear-gradient(90deg, #e0f3fa 0%, #fafdff 100%);
+  color: #173b6c;
+  border-radius: 12px;
+  padding: 18px 32px;
+  display: block;
+  width: 100%;
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
-  padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
 }
 .section-title h2::after {
   content: "";
@@ -935,6 +948,7 @@ section {
   width: 300px;
   z-index: 9999;
   background: #040b14;
+  border-radius: 16px;
 }
 #footer .copyright {
   text-align: center;
