@@ -1,7 +1,0 @@
-{
-  "name": "email-service",
-  "version": "1.0.0",
-  "dependencies": {
-    "nodemailer": "^6.9.0"
-  }
-}
