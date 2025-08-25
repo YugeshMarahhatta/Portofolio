@@ -130,11 +130,11 @@ const modeIcon = document.getElementById("modeIcon");
 const modeLabel = document.getElementById("modeLabel");
 function updateModeToggle() {
   if (document.body.classList.contains("light")) {
-    modeIcon.textContent = "🌞";
-    modeLabel.textContent = "Light";
-  } else {
     modeIcon.textContent = "🌙";
     modeLabel.textContent = "Dark";
+  } else {
+    modeIcon.textContent = "🌞";
+    modeLabel.textContent = "Light";
   }
 }
 modeToggle?.addEventListener("click", () => {
