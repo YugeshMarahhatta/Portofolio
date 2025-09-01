@@ -19,6 +19,26 @@ nav a:hover{opacity:1;color:var(--primary)}
 .btn:hover{transform:translateY(-2px);}
 .btn.outline{background:transparent;color:var(--text);border:2px solid var(--primary);box-shadow:none}
 
+.btn.download-cv {
+  background: linear-gradient(90deg, #ff6f61 0%, #4e54c8 50%, #8f94fb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.3s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn.download-cv:hover {
+  background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
 .toggle-btn{margin-left:20px;background:var(--card);color:var(--text);padding:8px 14px;border-radius:20px;font-size:14px;border:1px solid rgba(255,255,255,.1);cursor:pointer;transition:.3s;order:2}
 body.light .toggle-btn{border:1px solid rgba(0,0,0,.1)}
 .hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;width:40px;height:40px;background:var(--card);border:none;border-radius:10px;cursor:pointer;padding:0;margin-left:8px;z-index:100;order:3;position:relative;transition:background .3s}
