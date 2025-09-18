@@ -123,10 +123,29 @@ document.addEventListener("click", function (e) {
     }
   }
 });
-// Dark/Light mode toggle (icon and label responsive)
+// Dark/Light mode toggle (icon and label responsive) with localStorage persistence
 const modeToggle = document.getElementById("modeToggle");
 const modeIcon = document.getElementById("modeIcon");
 const modeLabel = document.getElementById("modeLabel");
+
+// Load theme preference from localStorage
+function loadThemePreference() {
+  const theme = localStorage.getItem("theme");
+  if (theme === "light") {
+    document.body.classList.add("light");
+  } else {
+    document.body.classList.remove("light");
+  }
+}
+
+function saveThemePreference() {
+  if (document.body.classList.contains("light")) {
+    localStorage.setItem("theme", "light");
+  } else {
+    localStorage.setItem("theme", "dark");
+  }
+}
+
 function updateModeToggle() {
   if (document.body.classList.contains("light")) {
     modeIcon.textContent = "🌙";
@@ -136,8 +155,14 @@ function updateModeToggle() {
     modeLabel.textContent = "Light";
   }
 }
+
+// On toggle, update theme and save preference
 modeToggle?.addEventListener("click", () => {
   document.body.classList.toggle("light");
   updateModeToggle();
+  saveThemePreference();
 });
+
+// On page load, set theme from preference
+loadThemePreference();
 updateModeToggle();
